@@ -10,7 +10,7 @@
 ### ⦁ *Animations* 
 
 ### How to run project
-Pull this project
+#### Pull this project
 
 ```command powershell
 git clone https://github.com/Or1onn/LoginPanel.git
