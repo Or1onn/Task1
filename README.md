@@ -16,9 +16,9 @@ Pull this project
 git clone https://github.com/Or1onn/LoginPanel.git
 ``` 
 
-Create a json folder in the wwwroot of the project, then in that folder create the appsettings.json file.
+#### Create a json folder in the wwwroot of the project, then in that folder create the appsettings.json file.
 
-In this file, at the property Default Connection, insert your connection string.
+#### In this file, at the property Default Connection, insert your connection string.
 
 ```json
 {
