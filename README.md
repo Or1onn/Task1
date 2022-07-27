@@ -6,7 +6,11 @@
 
 ### ⦁ *Connection with MS SQL*
 ### ⦁ *Hashing and Dehashing password*
-### ⦁ *Beautiful HTML design*
+### ⦁ *Using JWT*
+### ⦁ *Hashing and Dehashing JWT*
+### ⦁ *Authentication email*
+### ⦁ *Change password with email authentication*
+### ⦁ *Beautiful HTML design (Designed by: SELECTO)*
 ### ⦁ *Animations* 
 
 ### How to run project
