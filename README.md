@@ -8,6 +8,7 @@
 ### ⦁ *Hashing and Dehashing password*
 ### ⦁ *Using JWT*
 ### ⦁ *Hashing and Dehashing JWT*
+### ⦁ *SMTP system*
 ### ⦁ *Authentication email*
 ### ⦁ *Change password with email authentication*
 ### ⦁ *Beautiful HTML design (Designed by: SELECTO)*
