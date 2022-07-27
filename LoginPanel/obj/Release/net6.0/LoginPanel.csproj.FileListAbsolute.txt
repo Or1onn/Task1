@@ -259,3 +259,4 @@ C:\Users\Orion\source\repos\LoginPanel\obj\Release\net6.0\refint\LoginPanel.dll
 C:\Users\Orion\source\repos\LoginPanel\obj\Release\net6.0\LoginPanel.pdb
 C:\Users\Orion\source\repos\LoginPanel\obj\Release\net6.0\LoginPanel.genruntimeconfig.cache
 C:\Users\Orion\source\repos\LoginPanel\obj\Release\net6.0\ref\LoginPanel.dll
+C:\Users\Orion\source\repos\LoginPanel\bin\Release\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

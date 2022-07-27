@@ -7,6 +7,7 @@ C:\Users\Orion\source\repos\LoginPanel\obj\Release\net6.0\PubTmp\Out\LoginPanel.
 C:\Users\Orion\source\repos\LoginPanel\obj\Release\net6.0\PubTmp\Out\Humanizer.dll
 C:\Users\Orion\source\repos\LoginPanel\obj\Release\net6.0\PubTmp\Out\MessagePack.dll
 C:\Users\Orion\source\repos\LoginPanel\obj\Release\net6.0\PubTmp\Out\MessagePack.Annotations.dll
+C:\Users\Orion\source\repos\LoginPanel\obj\Release\net6.0\PubTmp\Out\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\Orion\source\repos\LoginPanel\obj\Release\net6.0\PubTmp\Out\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\Orion\source\repos\LoginPanel\obj\Release\net6.0\PubTmp\Out\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\Orion\source\repos\LoginPanel\obj\Release\net6.0\PubTmp\Out\Microsoft.Build.Locator.dll
