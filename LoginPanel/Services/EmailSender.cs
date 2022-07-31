@@ -9,40 +9,47 @@ namespace LoginPanel.Services
 {
     public class EmailSender
     {
-        public async Task Send(string? reciever)
+        public async Task Send(string? receiver)
         {
-            MailAddress from = new("FromEmail", "LoginPanel");
-            MailAddress to = new(reciever);
-            MailMessage mm2 = new(from, to);
-            mm2.Subject = "Email Authorization";
+            if (receiver != null)
+            {
+                MailAddress from = new("softwareflexible@gmail.com", "LoginPanel");
+                MailAddress to = new(receiver);
+                MailMessage mm2 = new(from, to);
+                mm2.Subject = "Email Authorization";
 
-            SmtpClient smtp = new();
+                SmtpClient smtp = new();
 
-            smtp.Host = "smtp.gmail.com";
-            smtp.Port = 587;
-            smtp.EnableSsl = true;
-            smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
-            smtp.UseDefaultCredentials = false;
-            smtp.Credentials = new NetworkCredential(from.Address, "Your Pass");
+                smtp.Host = "smtp.gmail.com";
+                smtp.Port = 587;
+                smtp.EnableSsl = true;
+                smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+                smtp.UseDefaultCredentials = false;
+                smtp.Credentials = new NetworkCredential(from.Address, "owashdaecigeseqw");
 
-            int length = 6;
-            var random = new Random();
-            var result = string.Join("", Enumerable.Range(0, length).Select(i => i % 2 == 0 ? (char)('A' + random.Next(26)) + "" : random.Next(1, 10) + ""));
-            mm2.Body = "<h3>Don't tell, share anyone your code for security purposes</h3> " + '\n' + '\n' +
-                        $"Your code - <b>{result}</b>";
-            mm2.IsBodyHtml = true;
+                int length = 6;
+                var random = new Random();
+                var result = string.Join("", Enumerable.Range(0, length).Select(i => i % 2 == 0 ? (char)('A' + random.Next(26)) + "" : random.Next(1, 10) + ""));
+                mm2.Body = "<h3>Don't tell, share anyone your code for security purposes</h3> " + '\n' + '\n' +
+                            $"Your code - <b>{result}</b>";
+                mm2.IsBodyHtml = true;
 
-            await smtp.SendMailAsync(mm2);
+                await smtp.SendMailAsync(mm2);
 
-            var claims = new List<Claim> { new Claim(ClaimTypes.Authentication, result) };
-            var jwt = new JwtSecurityToken(
-                   issuer: JWTModel.ISSUER,
-                   audience: JWTModel.AUDIENCE,
-                   claims: claims,
-                   expires: DateTime.UtcNow.Add(TimeSpan.FromMinutes(2)),
-                   signingCredentials: new SigningCredentials(JWTModel.GetSymmetricSecurityKey(), SecurityAlgorithms.HmacSha256));
+                var claims = new List<Claim> { new Claim(ClaimTypes.Authentication, result) };
+                var jwt = new JwtSecurityToken(
+                       issuer: JWTModel.ISSUER,
+                       audience: JWTModel.AUDIENCE,
+                       claims: claims,
+                       expires: DateTime.UtcNow.Add(TimeSpan.FromMinutes(2)),
+                       signingCredentials: new SigningCredentials(JWTModel.GetSymmetricSecurityKey(), SecurityAlgorithms.HmacSha256));
 
-            JWTModel.VALUE = new JwtSecurityTokenHandler().WriteToken(jwt);
+                JWTModel.VALUE = new JwtSecurityTokenHandler().WriteToken(jwt);
+            }
+            else
+            {
+                throw new ArgumentException("Recipient not set");
+            }
         }
     }
 }
