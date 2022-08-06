@@ -13,7 +13,7 @@ namespace LoginPanel.Services
         {
             if (receiver != null)
             {
-                MailAddress from = new("softwareflexible@gmail.com", "LoginPanel");
+                MailAddress from = new("Your Email", "LoginPanel");
                 MailAddress to = new(receiver);
                 MailMessage mm2 = new(from, to);
                 mm2.Subject = "Email Authorization";
@@ -25,7 +25,7 @@ namespace LoginPanel.Services
                 smtp.EnableSsl = true;
                 smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
                 smtp.UseDefaultCredentials = false;
-                smtp.Credentials = new NetworkCredential(from.Address, "owashdaecigeseqw");
+                smtp.Credentials = new NetworkCredential(from.Address, "Your Password");
 
                 int length = 6;
                 var random = new Random();
